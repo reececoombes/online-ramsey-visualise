@@ -1,10 +1,12 @@
 import React from "react";
-import { SimpleGraph } from "./simple-graph/SimpleGraph";
+import { SimpleGraph } from "./SimpleGraph/SimpleGraph";
 import styled from "styled-components";
+import {DisplayGame} from "./DisplayGame/DisplayGame";
 
 const App = () => (
     <Container className="App">
-        <SimpleGraph />
+        {/*<DisplayGame />*/}
+        <SimpleGraph/>
     </Container>
 );
 

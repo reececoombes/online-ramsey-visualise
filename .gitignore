@@ -44,6 +44,8 @@ yarn-error.log*
 .idea/**/dynamic.xml
 .idea/**/uiDesigner.xml
 .idea/**/dbnavigator.xml
+
+
 /.idea/.gitignore
 /.idea/inspectionProfiles/Project_Default.xml
 /.idea/misc.xml
