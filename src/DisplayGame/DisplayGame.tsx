@@ -13,21 +13,32 @@ export const DisplayGame = () => {
     const [nodeCount, setNodeCount] = useState<number>(0);
     const [nodes, setNodes] = useState<Nodes>([])
     const [edges, setEdges] = useState<Edges>([])
-    const graph = {
-        nodes: nodes,
-        edges: edges,
-    };
+    const [graphKey, setGraphKey] = useState(0)
+    // const graph = {
+    //     nodes: nodes,
+    //     edges: edges,
+    // };
+
+    // setNodes(])
+
+    console.log(nodes);
 
     const events = {
         select: function (event : graphData) {
             const { nodes, edges } = event;
-            console.log(nodes);
+            // console.log(nodes);
         },
     };
     return (
         <>
-            <button onClick={() => setNodes([...nodes, {id: nodes.length}] )}>Add node</button>
+            {/*<p>{nodes.toString()}</p>*/}
+            <button onClick={() => {
+                setNodes((prevNodes) => [...prevNodes, {id: nodeCount}] );
+                setNodeCount((prevNodeCount) => prevNodeCount + 1);
+                setGraphKey((prevGraphKey) => prevGraphKey+1);
+            }}>Add node</button>
             <Graph
+                key={graphKey}
                 graph={{nodes: nodes, edges: edges}}
                 options={graphOptions}
                 events={events}
@@ -38,5 +49,3 @@ export const DisplayGame = () => {
         </>
     );
 };
-
-const rootElement = document.getElementById("root");

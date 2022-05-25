@@ -5,8 +5,8 @@ import {DisplayGame} from "./DisplayGame/DisplayGame";
 
 const App = () => (
     <Container className="App">
-        {/*<DisplayGame />*/}
-        <SimpleGraph/>
+        <DisplayGame />
+        {/*<SimpleGraph/>*/}
     </Container>
 );
 
